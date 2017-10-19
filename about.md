@@ -12,4 +12,6 @@ A place to include any other types of information that you'd like to include abo
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[g.t.tongchuan@gmail.com](mailto:g.t.tongchuan@gmail.com)
+
+![Me_w_Nord](/images/Tongchuan_Nord.png)
