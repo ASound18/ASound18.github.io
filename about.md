@@ -4,11 +4,13 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+### ...my profile pic
 
-### More Information
+As a big fan of [Futurama](https://en.wikipedia.org/wiki/Futurama), my favorite character is [Fry](http://futurama.wikia.com/wiki/Philip_J._Fry_I), which explains my profile pic. My second favorite is [Bender](http://futurama.wikia.com/wiki/Bender_Bending_Rodr%C3%ADguez) by the way.
 
-A place to include any other types of information that you'd like to include about yourself.
+### ...me
+
+I'm .
 
 ### Contact me
 
