@@ -3,7 +3,7 @@ layout: post
 title: Modeling Default Probabilities
 ---
 
-This is part of a Moody's document, **Modeling Credit Portfolios** explanining RiskFrontier methodology.
+This is part of a Moody's document, **Modeling Credit Portfolios**, explanining RiskFrontier methodology.
 
 A primary source of risk in a credit portfolio is the probability of default (PD) of obligors in the portfolio. A firm *defaults* when it fails to make schedule principal or interest payments. In other words, a firm defaults when the market value of its assets (i.e., the value of its ongoing business) falls below its liabilities payable (i.e., the firm's default point). Traditional approaches for measuring default probabilitiy involve a detailed examination of a company's operations to project current and future cash flows of the firm. Other estimation methods, such as those used by Moody's Analytics, rely on observable market prices, such as trade equity and traded debt to determine an implied-default probability.
 
