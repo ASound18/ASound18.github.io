@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div style="left:800px;">
+<div>
   <h1>This is Front Page!</h1>
   <script src="//d3js.org/d3.v3.min.js"></script>
   <script>
@@ -31,7 +31,8 @@ layout: default
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
     .append("g")
-      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+      .attr("align","center");
 
   var path = svg.selectAll("path")
       .data(quad(points))
