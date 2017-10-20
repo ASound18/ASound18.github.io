@@ -10,7 +10,7 @@ As a fan of [Futurama](https://en.wikipedia.org/wiki/Futurama), my favorite char
 
 ### ...me
 
-I'm a professional data scientist. I started my career as **Financial Economist** at [Fannie Mae](http://www.fanniemae.com/portal/index.html) - the largest purchasers of mortgages on the secondary market in the world :house_with_garden:. After working there for almost 3 years I moved back to Shanghai, China where I am currently working at [AIG](http://www.aig.com/). Besides machine learning, I spend most of time in algorithm trading strategies. 
+I'm a professional quantitative analyst. I started my career as **Financial Economist** at [Fannie Mae](http://www.fanniemae.com/portal/index.html) - the largest purchasers of mortgages on the secondary market in the world :house_with_garden:. After working there for almost 3 years I moved back to Shanghai, China where I am currently working at [AIG](http://www.aig.com/). Besides machine learning, I spend most of time in algorithm trading strategies. 
 
 ### Contact me
 
