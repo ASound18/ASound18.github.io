@@ -5,4 +5,4 @@ title: Yoga Breathing Exercises
 
 Copyright of this article belongs to L.Z.. 
 
-<iframe style="scrolling:'no';" src="https://mp.weixin.qq.com/s/7J3f6bTHRbi2XMXEKe0Aow" frameborder="0" allowfullscreen></iframe>
+<iframe scrolling="no" src="https://mp.weixin.qq.com/s/7J3f6bTHRbi2XMXEKe0Aow" frameborder="0" allowfullscreen></iframe>
