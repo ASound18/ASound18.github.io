@@ -6,11 +6,11 @@ title: When Is The Next Crisis
 In short, my answer is around **two months** from now. I will explain in details.
 
 For the next financial crisis, there might be hundreds of questions to ask. 
-> When will it arrive? 
-> What would be the cause? 
-> How would the impact be?
-> How should we get prepared for it?
-> And so on...
++ When will it arrive? 
++ What would be the cause? 
++ How would the impact be?
++ How should we get prepared for it?
++ And so on...
 
 Unfortunately, I am not capable of answering every single one of them, or even anyone of them. But I did some exploration to try to address the first question about the timing of the next crisis based on the data I have with some prediction techniques. 
 
