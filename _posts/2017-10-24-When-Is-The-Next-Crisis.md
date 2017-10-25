@@ -25,5 +25,7 @@ Then I gave a try of the recently learnt **Kinetic Component Analysis** on the d
 The prediction window is 50 work day ahead, which can be converted to roughly a bit over two months. Based on the prediction chart, the level of position will be close to that of previous crisis no later than two months from now. Again, this is merely an application of **Kinetic Component Analysis** on Moody's **Default & Recovery Database (DRD)**. The prediction has been made, and let's see how it goes.
 
 
+
+
 [^first]: [Moody's Analytics Default & Recovery Database (DRD)](https://www.moodysanalytics.com/product-list/default-and-recovery-database)
 [^second]: For distressed exchanges, trading prices at default are used. For other types of defaults, trading prices approximately one month after default are used.
