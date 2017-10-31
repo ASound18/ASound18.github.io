@@ -21,8 +21,8 @@ The connections of neurons between two layers are essentially *weights*, which c
 
 As we understand what a neural network is, you may ask how does the *learning* part works. Supurisingly, this is not like rocket science, but it is actually just calculus (even worse LOL!). If you want to tell the machine that it is doing something wrong and to correct that, you need some sort of measurement for the machine to understand. Basically, it comes to finding the minima of a certian function, which is named the *cost function* (like the *residual sum of squares* used in OLS). In order to do this in a more generalized way, we start at a random point, and then tries to find the direction where the cost function decreases the fastest. In fact, the generic gradient descent does not guarantee that the local minima you land in is the smallest possible value of the cost function. If you are familar with multi-variable calculus, you would know that the gradient of a function gives the direction of the steepest ascent, which is the direction to increase the function most quickly. Thus, taking the negative of that gradient gives the direction to decrease the function most quickly. The algorithm for minimizing the function is simply to compute the gradient direction, then take a small step towards the opposite direction, and just repeat that over and over.   
 
-So now if you are still feeling not completely sure how a neural network works, this feeling is 100% right. I have not yet covered the algorithm named *backpropagation* for computing this gradient efficiently, which is the heart of how a neural network learns. And that is what will be covered in the next blog.
+So now if you are still feeling not completely sure how a neural network works, this feeling is 100% right. I have not yet covered the algorithm named *backpropagation* for computing this gradient efficiently, which is the heart of how a neural network learns. And that is what will be covered in the next post.
 
-Thank you for your time reading this. :)
+Thank you for your reading. :)
 
 ![machine_learning_2x](/images/machine_learning_2x.png)
