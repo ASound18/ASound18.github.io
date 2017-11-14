@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Modeling Default Probabilities
+comments: true
 ---
 
 This is part of a Moody's document, **Modeling Credit Portfolios**, explanining RiskFrontier methodology.
