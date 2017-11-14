@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Gradient Descent
+comments: true
 ---
 
 In this post, I will try to explain what the idea of **gradient descent** is, which is the basis of a lot of machine learning algorithms, especially neural networks. I will try to explain this in the easiest way, but feel free to grab your long-lost calculus book along the way. :) 
