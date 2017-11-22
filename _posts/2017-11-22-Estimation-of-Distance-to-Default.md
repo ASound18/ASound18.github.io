@@ -45,4 +45,4 @@ Then together the two equations above have two unknowns, the asset value and ass
 - Approach 1: solve the two-equation system repeatedly to get a time series of asset values, them compute the sample mean to obtain an estimate for 𝝁.
 - Appraoch 2: solve the two-equation system once at a single time, and apply the obtained 𝝈 to all earlier time points to obtain a time series of implied asset values and then derive the 𝝁 from the time series
 
-(𝑉_𝑡/𝑆(𝑉_𝑡;𝜎) 
+
