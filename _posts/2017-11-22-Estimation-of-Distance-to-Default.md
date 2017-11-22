@@ -42,7 +42,7 @@ By applying Ito's lemma to both sides of the Black-Scholes option pricing formul
 
 Then together the two equations above have two unknowns, the asset value and asset volatility. So the two equation system can be solved at any given time point. In practice the volatility restriction method can be implemented through the following two approaches, which do not yield exactly the same results and thus create some inconsistency.
 
-- Approach 1: solve the two-equation system repeatedly to get a time series of asset values, them compute the sample mean to obtain an estimate for asset drift.
+- Approach 1: solve the two-equation system repeatedly to get a time series of asset values, them compute the sample mean to obtain an estimate for 𝝁.
 - Appraoch 2: solve the two-equation system once at a single time, and apply the obtained 𝝈 to all earlier time points to obtain a time series of implied asset values and then derive the 𝝁 from the time series
 
-
+(𝑉_𝑡/𝑆(𝑉_𝑡;𝜎) 
