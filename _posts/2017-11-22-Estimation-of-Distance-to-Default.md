@@ -24,7 +24,7 @@ Then DD is defined as below. It can be seen as the logarithm of the leverage rat
 
 In practice, however, the asset return drift term cannot be estimated with reasonable precision using high frequency data over a time span of several years due to the nature of diffusion models. Therefore, DD is calculated in the following reduced form, which yields a more stable value. So in order to calculate DD, we need to first estimate asset drift and asset volatility.
 
-![equation](http://www.sciweavers.org/tex2img.php?eq=%20DD%5E%7B%2A%7D%20%20%3D%20%20%5Cfrac%7Bln%28%20%5Cfrac%7BV_%7Bt%7D%7D%7BF%7D%20%29%20%7D%7B%5Csigma%20%5Csqrt%7BT-t%7D%7D%20&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+![equation](https://www.sciweavers.org/tex2img.php?eq=%20DD%5E%7B%2A%7D%20%20%3D%20%20%5Cfrac%7Bln%28%20%5Cfrac%7BV_%7Bt%7D%7D%7BF%7D%20%29%20%7D%7B%5Csigma%20%5Csqrt%7BT-t%7D%7D%20&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
 
 
 ## The Market Value Proxy Method
