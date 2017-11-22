@@ -12,19 +12,19 @@ As the names suggests, distance-to-default (DD) measures how far a firm is away 
 
 The definition of DD is based on Merton's model, which assumes that firms are financed by equity and thus can be modeled as a call option on the underlying assets of the firm with a strike price equal to the book value of the firm's liabilities. The asset value *V* follows a geometric Brownian motion.
 
-![equation](http://www.sciweavers.org/tex2img.php?eq=%20%5Cfrac%7BdV%7D%7BV%7D%20%3D%20%5Cmu%20dt%2B%20%20%5Csigma%20_%7BV%7D%20dz&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+![equation1](http://www.sciweavers.org/tex2img.php?eq=%20%5Cfrac%7BdV%7D%7BV%7D%20%3D%20%5Cmu%20dt%2B%20%20%5Csigma%20_%7BV%7D%20dz&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
 
 Then the equity value at time *t* by Black-Scholes option pricing formula becomes
 
-![equation](http://www.sciweavers.org/tex2img.php?eq=S%28%20V_%7Bt%7D%20%2C%20%5Csigma%20%29%3D%20V_%7Bt%7D%20N%28%20d_%7Bt%7D%20%29-%20e%5E%7B-r%28T-t%29%7DFN%28%20d_%7Bt%7D-%20%5Csigma%20%5Csqrt%7BT-t%7D%20%20%20%29%20&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+![equation2](http://www.sciweavers.org/tex2img.php?eq=S%28%20V_%7Bt%7D%20%2C%20%5Csigma%20%29%3D%20V_%7Bt%7D%20N%28%20d_%7Bt%7D%20%29-%20e%5E%7B-r%28T-t%29%7DFN%28%20d_%7Bt%7D-%20%5Csigma%20%5Csqrt%7BT-t%7D%20%20%20%29%20&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
 
 Then DD is defined as below. It can be seen as the logarithm of the leverage ratio shifted by the expected return and scaled by the volatility.
 
-![equation](http://www.sciweavers.org/tex2img.php?eq=DD%20%3D%20%20%5Cfrac%7Bln%28%20%5Cfrac%7BV_%7Bt%7D%7D%7BF%7D%20%29%20%2B%20%28%20%5Cmu%20-%20%5Cfrac%7B%20%20%5Csigma%20%5E%7B2%7D%20%7D%7B2%7D%20%29%28T-t%29%7D%7B%5Csigma%20%5Csqrt%7BT-t%7D%7D%20&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+![equation3](http://www.sciweavers.org/tex2img.php?eq=DD%20%3D%20%20%5Cfrac%7Bln%28%20%5Cfrac%7BV_%7Bt%7D%7D%7BF%7D%20%29%20%2B%20%28%20%5Cmu%20-%20%5Cfrac%7B%20%20%5Csigma%20%5E%7B2%7D%20%7D%7B2%7D%20%29%28T-t%29%7D%7B%5Csigma%20%5Csqrt%7BT-t%7D%7D%20&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
 
 In practice, however, the asset return drift term cannot be estimated with reasonable precision using high frequency data over a time span of several years due to the nature of diffusion models. Therefore, DD is calculated in the following reduced form, which yields a more stable value. So in order to calculate DD, we need to first estimate asset drift and asset volatility.
 
-![equation](http://www.sciweavers.org/tex2img.php?eq=%20DD%5E%7B%2A%7D%20%20%3D%20%20%5Cfrac%7Bln%28%20%5Cfrac%7BV_%7Bt%7D%7D%7BF%7D%20%29%20%7D%7B%5Csigma%20%5Csqrt%7BT-t%7D%7D%20&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+![equation4](http://www.sciweavers.org/tex2img.php?eq=%20DD%5E%7B%2A%7D%20%20%3D%20%20%5Cfrac%7Bln%28%20%5Cfrac%7BV_%7Bt%7D%7D%7BF%7D%20%29%20%7D%7B%5Csigma%20%5Csqrt%7BT-t%7D%7D%20&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
 
 
 ## The Market Value Proxy Method
@@ -36,9 +36,9 @@ Since the market value of asset is not directly observable and hard to determine
 
 By applying Ito's lemma to both sides of the Black-Scholes option pricing formula, one can arrive at the following second equation decribing the relationship between asset volatility and equity volatility (the so-called volatility restriction).
 
-![equation](http://www.sciweavers.org/tex2img.php?eq=%20S_%7Bt%7D%20%3D%20S%28%20V_%7Bt%7D%3B%20%5Csigma%20%20%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+![equation5](http://www.sciweavers.org/tex2img.php?eq=%20S_%7Bt%7D%20%3D%20S%28%20V_%7Bt%7D%3B%20%5Csigma%20%20%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
 
-![equation](http://www.sciweavers.org/download/Tex2Img_1511340769.jpg)
+![equation6](http://www.sciweavers.org/tex2img.php?eq=%20%20%5Csigma%20_%7B%20S_%7Bt%7D%20%7D%20%3D%20%5Csigma%20%20%5Cfrac%7B%20V_%7Bt%7D%20%7D%7BS%28%20V_%7Bt%7D%2C%20%5Csigma%20%20%29%7D%20N%28%20d_%7Bt%7D%20%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
 
 Then together the two equations above have two unknowns, the asset value and asset volatility. So the two equation system can be solved at any given time point. In practice the volatility restriction method can be implemented through the following two approaches, which do not yield exactly the same results and thus create some inconsistency.
 
