@@ -8,7 +8,7 @@ This post summarizes several methods in calculating distance-to-default (DD), wh
 
 ## The Distance-to-Default
 
-As the names suggests, distance-to-default (DD) measures how far a firm is away from default. Strictly speaking, the firm must have limited liability. DD has been widely used both in academic research and business applications. Moody's EDF is one of the most famous applications that use DD to infer probability of default with an empirical mapping. 
+As the name suggests, distance-to-default (DD) measures how far a firm is away from default. Strictly speaking, the firm must have limited liability. DD has been widely used both in academic research and business applications. Moody's EDF is one of the most famous applications that use DD to infer probability of default with an empirical mapping. 
 
 The definition of DD is based on Merton's model, which assumes that firms are financed by equity and thus can be modeled as a call option on the underlying assets of the firm with a strike price equal to the book value of the firm's liabilities. The asset value *V* follows a geometric Brownian motion.
 
