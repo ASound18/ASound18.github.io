@@ -43,6 +43,42 @@ By applying Ito's lemma to both sides of the Black-Scholes option pricing formul
 Then together the two equations above have two unknowns, the asset value and asset volatility. So the two equation system can be solved at any given time point. In practice the volatility restriction method can be implemented through the following two approaches, which do not yield exactly the same results and thus create some inconsistency.
 
 - Approach 1: solve the two-equation system repeatedly to get a time series of asset values, them compute the sample mean to obtain an estimate for 𝝁.
-- Appraoch 2: solve the two-equation system once at a single time, and apply the obtained 𝝈 to all earlier time points to obtain a time series of implied asset values and then derive the 𝝁 from the time series
+- Appraoch 2: solve the two-equation system once at a single time, and apply the obtained 𝝈 to all earlier time points to obtain a time series of implied asset values and then derive the 𝝁 from the time series.
+
+The issue of the volatility restriction method is that the second equation linking equity and asset volatility holds only instantaneously. In practice the market leverage moves around far too much for the formula to provide reasonable results. It actually biases the probabilities in exactly the wrong direction. 
+
+
+## The KMV Method
+
+The KMV method improves on the volatility restriction method by replacing the second equation describing the volatility restriction with an iterative procedure consisting of the following steps:
+
+- Step 1: Assign an initial value for asset volatility 𝝈. 
+- Step 2: Given asset volatility, use BSM equation to estimate a time series of asset values and hence corresponding asset returns.
+- Step 3: Calculate the updated estimate for asset volatility from the implied asset returns obtained in step 2.
+- Step 4: Repeat Step 2 and Step 3 until the convergence of asset volatility.
+
+The following portion of code is from an implementation of the KMV method in R.
+~~~
+  asset_value = timeSeries(rep(NA, length(equity_value)), time(equity_value))
+  asset_volatility = equity_volatility  # initial estimate of volatility
+  asset_volatility_old = 0
+  index = 1
+  while(abs(asset_volatility - asset_volatility_old)/asset_volatility_old > 0.0001) {  # iterative solution for asset values
+    index = index + 1
+    for(i in 1:length(equity_value)) {
+      temp = uniroot(rooteqn, interval=c(equity_value[i], 1000*equity_value[i]), V=equity_value[i], rf=rf, sigma=asset_volatility, X=default_point, T=1)
+      asset_value[i] = temp$root
+    }
+    asset_volatility_old = asset_volatility
+    asset_volatility = as.numeric(sd(weeklyReturn(asset_value, type = 'log'), na.rm = TRUE)) * sqrt(52)
+  }
+~~~
+
+## The Maximum Likelihood Estimation Method
+
+
+
+
+... to be continued...
 
 
