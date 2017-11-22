@@ -12,5 +12,5 @@ As the names suggests, distance-to-default (DD) measures how far a firm is away 
 
 The definition of DD is based on Merton's model, which assumes that firms are financed by equity and thus can be modeled as a call option on the underlying assets of the frim with a strike price equal to the book value of the firm's liabilities. The asset value *A* follows a geometric Brownian motion.
 
->>>![equation](http://www.sciweavers.org/tex2img.php?eq=%20%5Cfrac%7BdA%7D%7BA%7D%20%3D%20%5Cmu%20dt%2B%20%20%5Csigma%20_%7BA%7D%20dz&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+>![equation](http://www.sciweavers.org/tex2img.php?eq=%20%5Cfrac%7BdA%7D%7BA%7D%20%3D%20%5Cmu%20dt%2B%20%20%5Csigma%20_%7BA%7D%20dz&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
 
