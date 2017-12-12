@@ -55,7 +55,7 @@ The KMV method improves on the volatility restriction method by replacing the se
 - Step 3: Calculate the updated estimate for asset volatility from the implied asset returns obtained in step 2.
 - Step 4: Repeat Step 2 and Step 3 until the convergence of asset volatility.
 
-The following portion of code is from an implementation of the KMV method in R.
+The following portion of code is an implementation of the KMV method in R.
 ~~~
   asset_value = timeSeries(rep(NA, length(equity_value)), time(equity_value))
   asset_volatility = equity_volatility  # initial estimate of volatility
@@ -74,8 +74,53 @@ The following portion of code is from an implementation of the KMV method in R.
 
 ## The Maximum Likelihood Estimation Method
 
+The Maximum Likelihood Esimation (MLE) method here is assumed to be using the same definition of default point as the KMV method.
 
+>> *default point = short-term liabilities + 0.5 * long-term liabilities*
 
+Then from assumption of Merton's model that asset value follows a geometric Brownian motion, one can derive a log-normal distribution based of asset return. And the log-likelihood function of this log-normal joint distrubution can be transfromed from asset values to equity values. The detailed derivation is skipped here, but I do encourage you to derive this log-likelihood function below by yourself, which really helps in understadning the following discussions. 
+
+![equation6](/images/post_20171122_6.png)
+
+This log-likelihood function can be maximized by various optimization techniques, but here we are uisng the Expectation Maximization (EM) algorithm to solve this maximization problem. It can be shown later than this EM solution to the MLE method is the same as the KMV method both in theory and implementation. The EM algorithm is a natural generalization of maximum likelihood estimation to the incomplete data model, where in this case, the market value of asset cannot be observed (latent variables).
+
++  **Expectation step** : evaluate the log-likelihood function conditioning the complete data (assign random initial guess for the 	unobserved).  
++ **Maximization step**: find new parameters that maximize the conditional expectation of log-likelihood function above.
+
+In our case, the conditional expectation of log-likelihood function in E-step is
+
+![equation7](/images/post_20171122_7.png)
+
+This is actually the original log-likelihood function of the asset values before transforming to equity values. And in M-step, maximizing the function above actually has the following analytical solution.
+
+![equation8](/images/post_20171122_8.png)
+
+The following part of code is an implementation of the EM algorithm in R, where *e_step* and *m_step* are customized functions.
+~~~
+  for (it in 1:maxit) {
+    
+    if (it == 1) {
+      ## initialization
+      e.step <- e_step(asset_drift = 0, asset_volatility = equity_volatility, equity_value = equity_value, default_point = default_point, rf = rf, h = h , T = T, n = n)
+      m.step <- m_step(e.step$loglik.func, e.step$asset_drift, e.step$asset_volatility)
+      cur.loglik.value <- e.step$loglik.value
+      loglik.vector <- cur.loglik.value
+    } else {
+      ## repeat E and M steps untill convergence
+      e.step <- e_step(m.step$asset_drift, m.step$asset_volatility, equity_value = equity_value, default_point = default_point, rf = rf, h = h , T = T, n = n)
+      m.step <- m_step(e.step$loglik.func, e.step$asset_drift, e.step$asset_volatility)
+      new.loglik.value <- e.step$loglik.value
+      loglik.vector <- c(loglik.vector, new.loglik.value)
+      
+      loglik.diff <- abs(cur.loglik.value - new.loglik.value)
+      if(loglik.diff < 1e-6) {
+        break
+      } else {
+        cur.loglik.value <- new.loglik.value
+      }
+    }
+  }
+~~~
 
 ... to be continued...
 
