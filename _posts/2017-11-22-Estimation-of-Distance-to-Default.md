@@ -12,19 +12,19 @@ As the name suggests, distance-to-default (DD) measures how far a firm is away f
 
 The definition of DD is based on Merton's model, which assumes that firms are financed by equity and thus can be modeled as a call option on the underlying assets of the firm with a strike price equal to the book value of the firm's liabilities. The asset value *V* follows a geometric Brownian motion.
 
-![equation1](images/post_20171122_1.png)
+![equation1](/images/post_20171122_1.png)
 
 Then the equity value at time *t* by Black-Scholes option pricing formula becomes
 
-![equation2](images/post_20171122_2.png)
+![equation2](/images/post_20171122_2.png)
 
 Then DD is defined as below. It can be seen as the logarithm of the leverage ratio shifted by the expected return and scaled by the volatility.
 
-![equation3](images/post_20171122_3.png)
+![equation3](/images/post_20171122_3.png)
 
 In practice, however, the asset return drift term cannot be estimated with reasonable precision using high frequency data over a time span of several years due to the nature of diffusion models. Therefore, DD is calculated in the following reduced form, which yields a more stable value. So in order to calculate DD, we need to first estimate asset drift and asset volatility.
 
-![equation4](images/post_20171122_4.png)
+![equation4](/images/post_20171122_4.png)
 
 
 ## The Market Value Proxy Method
@@ -36,7 +36,7 @@ Since the market value of asset is not directly observable and hard to determine
 
 By applying Ito's lemma to both sides of the Black-Scholes option pricing formula, one can arrive at the following second equation decribing the relationship between asset volatility and equity volatility (the so-called volatility restriction).
 
-![equation5](images/post_20171122_5.png)
+![equation5](/images/post_20171122_5.png)
 
 Then together the two equations above have two unknowns, the asset value and asset volatility. So the two equation system can be solved at any given time point. In practice the volatility restriction method can be implemented through the following two approaches, which do not yield exactly the same results and thus create some inconsistency.
 
