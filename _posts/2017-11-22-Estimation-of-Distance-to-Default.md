@@ -76,7 +76,7 @@ The following portion of code is an implementation of the KMV method in R.
 
 The Maximum Likelihood Esimation (MLE) method here is assumed to be using the same definition of default point as the KMV method.
 
->> *default point = short-term liabilities + 0.5 * long-term liabilities*
+  *default point = short-term liabilities + 0.5 * long-term liabilities*
 
 Then from assumption of Merton's model that asset value follows a geometric Brownian motion, one can derive a log-normal distribution based of asset return. And the log-likelihood function of this log-normal joint distrubution can be transfromed from asset values to equity values. The detailed derivation is skipped here, but I do encourage you to derive this log-likelihood function below by yourself, which really helps in understadning the following discussions. 
 
