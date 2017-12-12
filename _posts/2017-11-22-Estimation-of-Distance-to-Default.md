@@ -122,6 +122,4 @@ The following part of code is an implementation of the EM algorithm in R, where 
   }
 ~~~
 
-... to be continued...
-
 
